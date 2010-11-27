@@ -56,6 +56,7 @@ function script:append-path {
 append-path "$TOOLS"
 append-path "$TOOLS\ajaxmin"
 append-path "$TOOLS\Filezilla"
+append-path "$TOOLS\kdiff3"
 append-path "$TOOLS\Photoshop"
 append-path "$TOOLS\Notepad++"
 set-alias np notepad++
