@@ -57,8 +57,9 @@ append-path "$TOOLS"
 append-path "$TOOLS\ajaxmin"
 append-path "$TOOLS\Filezilla"
 append-path "$TOOLS\kdiff3"
-append-path "$TOOLS\Photoshop"
+append-path "$TOOLS\MoMA" # Mono Migration Analyzer
 append-path "$TOOLS\Notepad++"
+append-path "$TOOLS\Photoshop"
 set-alias np notepad++
 
 
