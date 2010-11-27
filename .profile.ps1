@@ -60,6 +60,7 @@ append-path "$TOOLS\kdiff3"
 append-path "$TOOLS\MoMA" # Mono Migration Analyzer
 append-path "$TOOLS\Notepad++"
 append-path "$TOOLS\Photoshop"
+append-path "$TOOLS\Reflector"
 set-alias np notepad++
 
 
