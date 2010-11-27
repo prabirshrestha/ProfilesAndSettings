@@ -54,6 +54,7 @@ function script:append-path {
 # add the portable applications to path
 #
 append-path "$TOOLS"
+append-path "$TOOLS\ajaxmin"
 append-path "$TOOLS\Filezilla"
 append-path "$TOOLS\Photoshop"
 append-path "$TOOLS\Notepad++"
