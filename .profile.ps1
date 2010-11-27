@@ -39,3 +39,21 @@ switch(Get-Content Env:\COMPUTERNAME){
 #
 Write-Host "Setting environment for '$windowsUserName@$computerName'" -foregroundcolor cyan
 $Host.UI.RawUI.WindowTitle = "$windowsUserName@$computerName"
+
+#
+# set path to include my usual directories
+# and configure dev environment
+#
+function script:append-path { 
+   if ( -not $env:PATH.contains($args) ) {
+      $env:PATH += ';' + $args
+   }
+}
+
+#
+# add the portable applications to path
+#
+append-path "$TOOLS"
+append-path "$TOOLS\Filezilla"
+
+
