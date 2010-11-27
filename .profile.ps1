@@ -53,16 +53,14 @@ function script:append-path {
 #
 # add the portable applications to path
 #
-append-path "$TOOLS"
-append-path "$TOOLS\ajaxmin"
-append-path "$TOOLS\Filezilla"
-append-path "$TOOLS\kdiff3"
-append-path "$TOOLS\MoMA" # Mono Migration Analyzer
-append-path "$TOOLS\Notepad++"
-append-path "$TOOLS\Photoshop"
-append-path "$TOOLS\Reflector"
-
+Set-Alias ajaxmin 	"$TOOLS\ajaxmin\ajaxmin.exe"
+Set-Alias filezilla "$TOOLS\Filezilla\filezilla.exe"
+Set-Alias kdiff3	"$TOOLS\kdiff3\kdiff3.exe"
+Set-Alias moma 		"$TOOLS\MoMA\MoMA.exe" # Mono Migration Analyzer
+Set-Alias notepad++ "$TOOLS\Notepad++\notepad++.exe"
 Set-Alias np notepad++
+Set-Alias photoshop "$TOOLS\Photoshop\Photoshop.exe"
+Set-Alias reflector "$TOOLS\Reflector\reflector.exe"
 Set-Alias pik "$TOOLS\pik\pik.bat" # set aliaas for pik
 
 
