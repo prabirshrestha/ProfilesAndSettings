@@ -60,6 +60,7 @@ Set-Alias reflector "$TOOLS\Reflector\reflector.exe"
 Set-Alias pik "$TOOLS\pik\pik.bat" # set aliaas for pik
 Set-Alias git "$TOOLS\git\cmd\git.cmd"
 Set-Alias gitk "$TOOLS\git\cmd\gitk.cmd"
+append-path "$TOOLS\tortoisehg\"
 
 
 # uuidgen.exe replacement
@@ -70,6 +71,7 @@ function uuidgen {
 
 # Load posh-git module
 Import-Module $HOME\ps-scripts\posh-git\posh-git
+Import-Module $HOME\ps-scripts\posh-hg\posh-hg
 
 # SETUP PROMPT
 function prompt {
@@ -83,6 +85,10 @@ function prompt {
     # Git Prompt
     $Global:GitStatus = Get-GitStatus
     Write-GitStatus $GitStatus
+	
+	# Mercurial Prompt
+    $Global:HgStatus = Get-HgStatus
+    Write-HgStatus $HgStatus
 	
 	# start writing the command at new line
 	# coz it is easier to see the command in the same line.
@@ -103,6 +109,8 @@ function TabExpansion($line, $lastWord) {
     switch -regex ($lastBlock) {
         # Execute git tab completion for all git-related commands
         'git (.*)' { GitTabExpansion $lastBlock }
+		# mercurial and tortoisehg tab expansion
+        '(hg|hgtk) (.*)' { HgTabExpansion($lastBlock) }
         # Fall back on existing tab expansion
         default { DefaultTabExpansion $line $lastWord }
     }
