@@ -68,3 +68,6 @@ Set-Alias pik "$TOOLS\pik\pik.bat" # set aliaas for pik
 function uuidgen {
    [guid]::NewGuid().ToString('d')
 }
+
+# import posh-git
+Import-Module $HOME\ps-scripts\posh-git\posh-git
