@@ -61,7 +61,9 @@ append-path "$TOOLS\MoMA" # Mono Migration Analyzer
 append-path "$TOOLS\Notepad++"
 append-path "$TOOLS\Photoshop"
 append-path "$TOOLS\Reflector"
-set-alias np notepad++
+
+Set-Alias np notepad++
+Set-Alias pik "$TOOLS\pik\pik.bat" # set aliaas for pik
 
 
 # uuidgen.exe replacement
