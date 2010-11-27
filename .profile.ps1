@@ -78,13 +78,18 @@ Import-Module $HOME\ps-scripts\posh-git\posh-git
 
 # Set up a simple prompt, adding the git prompt parts inside git repos
 function prompt {
+	# start a new line after the last command. makes it clear
+	Write-Host ""
     Write-Host($pwd) -nonewline
         
     # Git Prompt
     $Global:GitStatus = Get-GitStatus
     Write-GitStatus $GitStatus
-
-    return "> "
+	
+	# start writing the command at new line
+	# coz it is easier to see the command in the same line.
+	Write-Host ""
+    return "$ "
 }
 
 if(-not (Test-Path Function:\DefaultTabExpansion)) {
