@@ -55,5 +55,6 @@ function script:append-path {
 #
 append-path "$TOOLS"
 append-path "$TOOLS\Filezilla"
+append-path "$TOOLS\Photoshop"
 
 
