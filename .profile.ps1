@@ -34,11 +34,7 @@ switch(Get-Content Env:\COMPUTERNAME){
 	}
 }
 
-#
-# Updated the powershell window title with username@computername
-#
 Write-Host "Setting environment for '$windowsUserName@$computerName'" -foregroundcolor cyan
-$Host.UI.RawUI.WindowTitle = "$windowsUserName@$computerName"
 
 #
 # set path to include my usual directories
@@ -71,16 +67,18 @@ function uuidgen {
    [guid]::NewGuid().ToString('d')
 }
 
-#************* START GIT *****************
 
 # Load posh-git module
 Import-Module $HOME\ps-scripts\posh-git\posh-git
 
-# Set up a simple prompt, adding the git prompt parts inside git repos
+# SETUP PROMPT
 function prompt {
 	# start a new line after the last command. makes it clear
 	Write-Host ""
-    Write-Host($pwd) -nonewline
+	
+	# http://markembling.info/view/my-ideal-powershell-prompt-with-git-integration
+	$host.UI.RawUi.WindowTitle = $env:username + '@' + [System.Environment]::MachineName + ' ' + ($pwd)
+	Write-Host($pwd) -nonewline -foregroundcolor Green 
         
     # Git Prompt
     $Global:GitStatus = Get-GitStatus
@@ -91,6 +89,8 @@ function prompt {
 	Write-Host ""
     return "$ "
 }
+
+#************* START MORE GIT *****************
 
 if(-not (Test-Path Function:\DefaultTabExpansion)) {
     Rename-Item Function:\TabExpansion DefaultTabExpansion
