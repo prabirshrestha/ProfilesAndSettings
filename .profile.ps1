@@ -60,3 +60,7 @@ append-path "$TOOLS\Notepad++"
 set-alias np notepad++
 
 
+# uuidgen.exe replacement
+function uuidgen {
+   [guid]::NewGuid().ToString('d')
+}
