@@ -60,6 +60,7 @@ Set-Alias reflector "$TOOLS\Reflector\reflector.exe"
 Set-Alias pik "$TOOLS\pik\pik.bat" # set aliaas for pik
 Set-Alias git "$TOOLS\git\cmd\git.cmd"
 Set-Alias gitk "$TOOLS\git\cmd\gitk.cmd"
+Set-Alias touch "$TOOLS\git\bin\touch.exe"
 append-path "$TOOLS\tortoisehg\"
 
 

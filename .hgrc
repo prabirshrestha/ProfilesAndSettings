@@ -1,0 +1,8 @@
+[ui]
+username = prabirshrestha <mail@prabir.me>
+
+[extensions]
+progress = 
+
+[progress]
+delay = 1.5
