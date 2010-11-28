@@ -61,8 +61,9 @@ Set-Alias pik "$TOOLS\pik\pik.bat" # set aliaas for pik
 Set-Alias git "$TOOLS\git\cmd\git.cmd"
 Set-Alias gitk "$TOOLS\git\cmd\gitk.cmd"
 Set-Alias touch "$TOOLS\git\bin\touch.exe"
-append-path "$TOOLS\tortoisehg\"
-
+Set-Alias wget "$TOOLS\gnu\wget\wget.exe"
+append-path "$TOOLS\tortoisehg"
+append-path "$TOOLS\ruby-1.9.2-p0-i386-mingw32\bin"
 
 # uuidgen.exe replacement
 function uuidgen {
@@ -97,8 +98,6 @@ function prompt {
     return "$ "
 }
 
-#************* START MORE GIT *****************
-
 if(-not (Test-Path Function:\DefaultTabExpansion)) {
     Rename-Item Function:\TabExpansion DefaultTabExpansion
 }
@@ -120,4 +119,3 @@ function TabExpansion($line, $lastWord) {
 Enable-GitColors
 
 Pop-Location
-#************* END GIT *****************
