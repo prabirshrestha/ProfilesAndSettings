@@ -3,7 +3,7 @@
 # call from profile.ps1, like this:
 #     . "$env:HOME\.profile.ps1"
 # (notice the '.')
-# make sure you set the HOME environent variable (ex:  c:\HOMEDIRl)
+# make sure you set the HOME environent variable (ex:  c:\HOMEDIR)
 # 
 ###############################################################################
 
@@ -57,13 +57,13 @@ Set-Alias notepad++ "$TOOLS\Notepad++\notepad++.exe"
 Set-Alias np notepad++
 Set-Alias photoshop "$TOOLS\Photoshop\Photoshop.exe"
 Set-Alias reflector "$TOOLS\Reflector\reflector.exe"
-Set-Alias pik "$TOOLS\pik\pik.bat" # set aliaas for pik
-Set-Alias git "$TOOLS\git\cmd\git.cmd"
+Set-Alias pik "$TOOLS\pik\pik.bat"
+Set-Alias git "$TOOLS\git\cmd\git.cmd"        # download portable git from http://code.google.com/p/msysgit/downloads/list
 Set-Alias gitk "$TOOLS\git\cmd\gitk.cmd"
 Set-Alias touch "$TOOLS\git\bin\touch.exe"
-Set-Alias wget "$TOOLS\gnu\wget\wget.exe"
-append-path "$TOOLS\tortoisehg"
-append-path "$TOOLS\ruby-1.9.2-p0-i386-mingw32\bin"
+Set-Alias wget "$TOOLS\gnu\wget\bin\wget.exe" # http://gnuwin32.sourceforge.net/packages/wget.htm (requires both binaries and dependencies)
+append-path "$TOOLS\tortoisehg"               # download tortoise hg from http://tortoisehg.bitbucket.org/download/index.html (you can extract the msi by "msiexec /a tortoisehg-1.1.4-hg-1.6.4-x64.msi /qb TARGETDIR=f:\hg-temp")
+append-path "$TOOLS\ruby-1.9.2-p0-i386-mingw32\bin" # http://rubyforge.org/frs/?group_id=167 (ruby-1.9.2-p0-i386-mingw32.7z)
 
 # uuidgen.exe replacement
 function uuidgen {
