@@ -2,3 +2,4 @@
 .gitk
 .ssh/
 .subversion/
+.bash_history
