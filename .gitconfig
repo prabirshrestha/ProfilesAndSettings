@@ -12,3 +12,9 @@
 	cm = commit
 	st = status
 	co = checkout
+[diff]
+    tool = kdiff3
+[difftool "kdiff3"]
+    cmd = "\"kdiff3\" \"$LOCAL\" \"$REMOTE\""
+[difftool]
+	prompt = false
