@@ -15,6 +15,6 @@
 [diff]
     tool = kdiff3
 [difftool "kdiff3"]
-    cmd = "\"kdiff3\" \"$LOCAL\" \"$REMOTE\""
+    path = kdiff3
 [difftool]
 	prompt = false

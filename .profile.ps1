@@ -51,7 +51,6 @@ function script:append-path {
 #
 Set-Alias ajaxmin 	"$TOOLS\ajaxmin\ajaxmin.exe"
 Set-Alias filezilla "$TOOLS\Filezilla\filezilla.exe"
-Set-Alias kdiff3	"$TOOLS\kdiff3\kdiff3.exe"
 Set-Alias moma 		"$TOOLS\MoMA\MoMA.exe" # Mono Migration Analyzer
 Set-Alias notepad++ "$TOOLS\Notepad++\notepad++.exe"
 Set-Alias np notepad++
@@ -62,6 +61,7 @@ Set-Alias git "$TOOLS\git\cmd\git.cmd"        # download portable git from http:
 Set-Alias gitk "$TOOLS\git\cmd\gitk.cmd"
 Set-Alias touch "$TOOLS\git\bin\touch.exe"
 Set-Alias wget "$TOOLS\gnu\wget\bin\wget.exe" # http://gnuwin32.sourceforge.net/packages/wget.htm (requires both binaries and dependencies)
+append-path	"$TOOLS\kdiff3"
 append-path "$TOOLS\tortoisehg"               # download tortoise hg from http://tortoisehg.bitbucket.org/download/index.html (you can extract the msi by "msiexec /a tortoisehg-1.1.4-hg-1.6.4-x64.msi /qb TARGETDIR=f:\hg-temp")
 append-path "$TOOLS\ruby-1.9.2-p0-i386-mingw32\bin" # http://rubyforge.org/frs/?group_id=167 (ruby-1.9.2-p0-i386-mingw32.7z)
 
