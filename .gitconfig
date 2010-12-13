@@ -20,6 +20,10 @@
 	current = green reverse
 	local = green
 	remote = cyan
+[color "status"]
+   added = green
+   changed = yellow
+   untracked = red
 [diff]
     tool = kdiff3
 [difftool "kdiff3"]
