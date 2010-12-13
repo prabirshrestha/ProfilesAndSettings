@@ -13,6 +13,7 @@
 	br = branch
 	st = status
 	co = checkout
+	w = whatchanged
 [diff]
     tool = kdiff3
 [difftool "kdiff3"]
