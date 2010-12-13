@@ -14,6 +14,7 @@
 	st = status
 	co = checkout
 	w = whatchanged
+	rank = shortlog -sn --no-merges
 	tags = tag -n1 -l
 [diff]
     tool = kdiff3
