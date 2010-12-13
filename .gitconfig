@@ -16,6 +16,10 @@
 	w = whatchanged
 	rank = shortlog -sn --no-merges
 	tags = tag -n1 -l
+[color "branch"]
+	current = green reverse
+	local = green
+	remote = cyan
 [diff]
     tool = kdiff3
 [difftool "kdiff3"]
