@@ -10,6 +10,7 @@
 [alias]
 	l = log
 	ci = commit
+	br = branch
 	st = status
 	co = checkout
 [diff]
