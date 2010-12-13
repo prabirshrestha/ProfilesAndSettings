@@ -14,6 +14,7 @@
 	st = status
 	co = checkout
 	w = whatchanged
+	tags = tag -n1 -l
 [diff]
     tool = kdiff3
 [difftool "kdiff3"]
