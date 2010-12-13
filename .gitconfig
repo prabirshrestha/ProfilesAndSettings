@@ -18,3 +18,9 @@
     path = kdiff3
 [difftool]
 	prompt = false
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = kdiff3
+[mergetool]
+	prompt = false
