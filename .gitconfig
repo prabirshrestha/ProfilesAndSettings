@@ -9,7 +9,7 @@
 	autocrlf = false
 [alias]
 	l = log
-	cm = commit
+	ci = commit
 	st = status
 	co = checkout
 [diff]
