@@ -1,4 +1,6 @@
 .kdiff3rc
 .gitk
+.gem/
 .ssh/
 .subversion/
+.bash_history

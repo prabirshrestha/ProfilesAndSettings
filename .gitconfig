@@ -9,6 +9,30 @@
 	autocrlf = false
 [alias]
 	l = log
-	cm = commit
+	ci = commit
+	br = branch
 	st = status
 	co = checkout
+	w = whatchanged
+	rank = shortlog -sn --no-merges
+	tags = tag -n1 -l
+[color "branch"]
+	current = green reverse
+	local = green
+	remote = cyan
+[color "status"]
+   added = green
+   changed = yellow
+   untracked = red
+[diff]
+    tool = kdiff3
+[difftool "kdiff3"]
+    path = kdiff3
+[difftool]
+	prompt = false
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = kdiff3
+[mergetool]
+	prompt = false
