@@ -1,3 +1,0 @@
-[submodule "ps-scripts/posh-git"]
-	path = ps-scripts/posh-git
-	url = https://github.com/dahlbyk/posh-git.git
