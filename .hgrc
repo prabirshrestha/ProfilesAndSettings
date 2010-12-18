@@ -6,5 +6,8 @@ bookmarks =
 progress = 
 rebase =
 
+[bookmarks]
+track.current = True
+
 [progress]
 delay = 1.5
