@@ -3,6 +3,7 @@ username = prabirshrestha <mail@prabir.me>
 
 [extensions]
 bookmarks =
+graphlog = 
 progress = 
 rebase =
 
