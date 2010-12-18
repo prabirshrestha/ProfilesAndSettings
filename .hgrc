@@ -3,6 +3,7 @@ username = prabirshrestha <mail@prabir.me>
 
 [extensions]
 progress = 
+rebase =
 
 [progress]
 delay = 1.5
