@@ -5,6 +5,7 @@ username = prabirshrestha <mail@prabir.me>
 color =
 bookmarks =
 graphlog = 
+parentrevspec =
 progress = 
 rebase =
 
