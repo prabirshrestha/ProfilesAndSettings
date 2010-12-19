@@ -2,13 +2,18 @@
 username = prabirshrestha <mail@prabir.me>
 
 [extensions]
+color =
 bookmarks =
 graphlog = 
 progress = 
 rebase =
 
+[color]
+mode = win32
+
 [bookmarks]
 track.current = True
+
 
 [progress]
 delay = 1.5
