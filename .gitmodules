@@ -1,0 +1,3 @@
+[submodule "hg-modules/hg-git"]
+	path = hg-modules/hg-git
+	url = git://github.com/schacon/hg-git.git
