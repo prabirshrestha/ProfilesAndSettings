@@ -8,6 +8,7 @@ graphlog =
 parentrevspec =
 progress = 
 rebase =
+hggit = ~/hg-modules/hg-git/hggit
 
 [color]
 mode = win32
