@@ -1,4 +1,5 @@
-@echo off
+REM hg2git https://hg01.codeplex.com/facebooksdk facebooksdk
+
 SET CLONE_URL=%1
 SET DESTINATION_PATH=%2
 
@@ -26,3 +27,6 @@ cd ..
 @echo.
 @echo git clone %DESTINATION_PATH%.hggit %DESTINATION_PATH%
 git clone %DESTINATION_PATH%.hggit %DESTINATION_PATH%
+
+@echo.
+@echo make sure you have "git/*" in .hgignore
