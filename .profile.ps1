@@ -49,6 +49,7 @@ function script:append-path {
 #
 # add the portable applications to path
 #
+Set-Alias hg2git "$HOME\ps-scripts\hg2git.bat"
 Set-Alias ajaxmin 	"$TOOLS\ajaxmin\ajaxmin.exe"
 Set-Alias filezilla "$TOOLS\Filezilla\filezilla.exe"
 Set-Alias moma 		"$TOOLS\MoMA\MoMA.exe" # Mono Migration Analyzer
@@ -115,6 +116,7 @@ function TabExpansion($line, $lastWord) {
         default { DefaultTabExpansion $line $lastWord }
     }
 }
+
 
 Enable-GitColors
 
