@@ -1,3 +1,4 @@
+@echo off
 REM hg2git https://hg01.codeplex.com/facebooksdk facebooksdk
 
 SET CLONE_URL=%1
