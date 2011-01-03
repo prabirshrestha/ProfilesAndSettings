@@ -66,6 +66,7 @@ append-path "$TOOLS\tortoisehg"               # download tortoise hg from http:/
 append-path "$TOOLS\ruby-1.9.2-p0-i386-mingw32\bin" # http://rubyforge.org/frs/?group_id=167 (ruby-1.9.2-p0-i386-mingw32.7z)
 append-path "$TOOLS\git\cmd"        # download portable git from http://code.google.com/p/msysgit/downloads/list
 append-path "$TOOLS\veracity"
+append-path "$TOOLS\NuGet"
 
 # uuidgen.exe replacement
 function uuidgen {
