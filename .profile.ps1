@@ -65,6 +65,7 @@ append-path	"$TOOLS\kdiff3"
 append-path "$TOOLS\tortoisehg"               # download tortoise hg from http://tortoisehg.bitbucket.org/download/index.html (you can extract the msi by "msiexec /a tortoisehg-1.1.4-hg-1.6.4-x64.msi /qb TARGETDIR=f:\hg-temp")
 append-path "$TOOLS\ruby-1.9.2-p0-i386-mingw32\bin" # http://rubyforge.org/frs/?group_id=167 (ruby-1.9.2-p0-i386-mingw32.7z)
 append-path "$TOOLS\git\cmd"        # download portable git from http://code.google.com/p/msysgit/downloads/list
+append-path "$TOOLS\veracity"
 
 # uuidgen.exe replacement
 function uuidgen {
