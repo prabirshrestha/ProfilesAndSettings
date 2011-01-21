@@ -1,0 +1,22 @@
+<TemplatesExport family="Live Templates">
+  <Template uid="72843a60-6b39-4bf3-8a7d-388374dd057b" shortcut="mstc" description="MSTest class" text="[TestClass]&#xD;&#xA;public class $classname$&#xD;&#xA;{&#xD;&#xA;	$END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeAndNamespace" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="classname" expression="getFileNameWithoutExtension()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="0c90892b-fd34-42fd-98ac-c76b5e1e2839" shortcut="mstm" description="MSTestMethod" text="[TestMethod]&#xD;&#xA;public void $methodname$()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="methodname" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
