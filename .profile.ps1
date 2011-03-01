@@ -59,6 +59,7 @@ Set-Alias photoshop "$TOOLS\Photoshop\Photoshop.exe"
 Set-Alias reflector "$TOOLS\Reflector\reflector.exe"
 Set-Alias pik "$TOOLS\pik\pik.bat"
 Set-Alias touch "$TOOLS\git\bin\touch.exe"
+Set-Alias ssh-keygen "$TOOLS\git\bin\ssh-keygen.exe"
 Set-Alias wget "$TOOLS\gnu\wget\bin\wget.exe" # http://gnuwin32.sourceforge.net/packages/wget.htm (requires both binaries and dependencies)
 Set-Alias git-bash "$TOOLS\git\git-bash.bat"
 append-path	"$TOOLS\kdiff3"
