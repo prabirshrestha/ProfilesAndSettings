@@ -68,6 +68,8 @@ append-path "$TOOLS\ruby-1.9.2-p0-i386-mingw32\bin" # http://rubyforge.org/frs/?
 append-path "$TOOLS\git\cmd"        # download portable git from http://code.google.com/p/msysgit/downloads/list
 append-path "$TOOLS\veracity"
 append-path "$TOOLS\NuGet"
+append-path "$TOOLS\vim\vim73\"
+$env:EDITOR = "vim"
 
 # uuidgen.exe replacement
 function uuidgen {
