@@ -69,6 +69,7 @@ append-path "$TOOLS\git\cmd"        # download portable git from http://code.goo
 append-path "$TOOLS\veracity"
 append-path "$TOOLS\NuGet"
 append-path "$TOOLS\vim\vim73\"
+append-path "$HOME\tools\curl"
 $env:EDITOR = "vim"
 
 # uuidgen.exe replacement
