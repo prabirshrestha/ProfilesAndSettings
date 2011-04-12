@@ -39,3 +39,8 @@
 	set mouse=a					" automatically enable mouse usage
 	
 " }
+
+" Vim UI {
+	color prabirdark   	       		" load a colorscheme
+	set showmode                   	" display the current mode
+" }
