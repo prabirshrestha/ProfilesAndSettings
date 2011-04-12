@@ -43,4 +43,55 @@
 " Vim UI {
 	color prabirdark   	       		" load a colorscheme
 	set showmode                   	" display the current mode
+	set cursorline  				" highlight current line
+	set nu							" Line numbers on
+	set showmatch					" show matching brackets/parenthesis
+	set incsearch					" find as you type search
+	set hlsearch					" highlight search terms
+	set ignorecase					" case insensitive search
+	set smartcase					" case sensitive when uc present
+	set scrolloff=3 				" minimum lines to keep above and below cursor
+	set foldenable  				" auto fold code
+
 " }
+
+" Formatting {
+	set nowrap                     	" wrap long lines
+	set autoindent                 	" indent at the same level of the previous line
+	set shiftwidth=4               	" use indents of 4 spaces
+	set expandtab 	  	     		" tabs are spaces, not tabs
+	set tabstop=4 					" an indentation every four columns
+	set softtabstop=4 				" let backspace delete indent
+	"set matchpairs+=<:>            " match, to be used with % 
+	set pastetoggle=<F12>          	" pastetoggle (sane indentation on pastes)
+	"set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
+	" Remove trailing whitespaces and ^M chars
+	autocmd FileType c,cs,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+" }
+
+function! InitializeDirectories()
+  let separator = "."
+  let parent = $HOME 
+  let prefix = '.vim'
+  let dir_list = { 
+			  \ 'backup': 'backupdir', 
+			  \ 'views': 'viewdir', 
+			  \ 'swap': 'directory' }
+
+  for [dirname, settingname] in items(dir_list)
+	  let directory = parent . '/' . prefix . dirname . "/"
+	  if exists("*mkdir")
+		  if !isdirectory(directory)
+			  call mkdir(directory)
+		  endif
+	  endif
+	  if !isdirectory(directory)
+		  echo "Warning: Unable to create backup directory: " . directory
+		  echo "Try: mkdir -p " . directory
+	  else  
+          let directory = substitute(directory, " ", "\\\\ ", "")
+          exec "set " . settingname . "=" . directory
+	  endif
+  endfor
+endfunction
+call InitializeDirectories() 

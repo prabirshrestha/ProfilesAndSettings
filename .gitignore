@@ -7,3 +7,9 @@
 .viminfo
 .VirtualBox/
 VirtualBox VMs/
+
+# Vim ignores
+*.swp
+.vimbackup/
+.vimswap/
+.vimviews/
