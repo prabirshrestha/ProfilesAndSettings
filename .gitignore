@@ -4,6 +4,6 @@
 .ssh/
 .subversion/
 .bash_history
-_viminfo
+.viminfo
 .VirtualBox/
 VirtualBox VMs/
