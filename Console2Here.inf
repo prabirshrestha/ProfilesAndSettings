@@ -9,7 +9,7 @@
 ; //            menu for Console2
 ; //
 ; // Version:   1.0
-; // Date :     11/27/2010
+; // Date :     5/2/2011
 ; //
 ; // based on http://technet.microsoft.com/en-us/magazine/2008.06.elevation.aspx
 ; //
@@ -47,12 +47,13 @@ Console2Here.INF
 [Console2Here.AddReg]
 HKLM,%UDHERE%,DisplayName,,"%DisplayName%"
 HKLM,%UDHERE%,DisplayVersion,,"%DisplayVersion%"
+HKLM,%UDHERE%,DisplayIcon,,"%11%\icon.ico"
 HKLM,%UDHERE%,UninstallString,,"rundll32.exe syssetup.dll,SetupInfObjectInstallAction DefaultUninstall 132 %17%\Console2Here.inf"
 
 HKCR,Directory\Shell\Console2Here,,,"%Console2HereAccel%"
-HKCR,Directory\Shell\Console2Here\command,,,"D:\Prabir\Documents\PortableApps\Console2\Console.exe -d ""%1"""
+HKCR,Directory\Shell\Console2Here\command,,,"D:\Prabir\Home\tools\Console2\Console.exe -d ""%1"""
 HKCR,Drive\Shell\Console2Here,,,"%Console2HereAccel%"
-HKCR,Drive\Shell\Console2Here\command,,,"D:\Prabir\Documents\PortableApps\Console2\Console.exe -d ""%1"""
+HKCR,Drive\Shell\Console2Here\command,,,"D:\Prabir\Home\tools\Console2\Console.exe -d ""%1"""
 
 [Console2Here.DelReg]
 HKLM,%UDHERE%
@@ -61,6 +62,6 @@ HKCR,Drive\Shell\Console2Here
 
 [Strings]
 DisplayName="Console2 Prompt Here PowerToy for Console2 (v1.0) (Uninstall only)"
-DisplayVersion="1.0.2"
+DisplayVersion="1.0.3"
 Console2HereAccel="Open Console2 Here"
 UDHERE="Software\Microsoft\Windows\CurrentVersion\Uninstall\Console2Here"
