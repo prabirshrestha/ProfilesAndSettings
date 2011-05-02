@@ -18,7 +18,8 @@ set-variable -name HOME -value (resolve-path $env:Home) -force
 #
 # global variables and core env variables 
 #
-$TOOLS = [Environment]::GetFolderPath("MyDocuments") + "\PortableApps"
+#$TOOLS = [Environment]::GetFolderPath("MyDocuments") + "\PortableApps"
+$TOOLS = $env:HOME + "\tools"
 
 #
 #  good place change  HOME/OFFICE configurations out here
