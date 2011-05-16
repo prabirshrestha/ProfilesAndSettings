@@ -50,7 +50,6 @@ function script:append-path {
 #
 # add the portable applications to path
 #
-Set-Alias hg2git "$HOME\ps-scripts\hg2git.bat"
 Set-Alias ajaxmin 	"$TOOLS\ajaxmin\ajaxmin.exe"
 Set-Alias filezilla "$TOOLS\Filezilla\filezilla.exe"
 Set-Alias moma 		"$TOOLS\MoMA\MoMA.exe" # Mono Migration Analyzer
@@ -81,8 +80,8 @@ function uuidgen {
 
 
 # Load posh-git module
-Import-Module $HOME\ps-scripts\posh-git\posh-git
-Import-Module $HOME\ps-scripts\posh-hg\posh-hg
+Import-Module $HOME\powershell\posh-git\posh-git
+Import-Module $HOME\powershell\posh-hg\posh-hg
 
 # SETUP PROMPT
 function prompt {

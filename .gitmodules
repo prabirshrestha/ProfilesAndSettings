@@ -2,3 +2,9 @@
 	path = hg-modules/hg-git
 	url = git://github.com/schacon/hg-git.git
 	ignore = dirty
+[submodule "powershell/posh-hg"]
+	path = powershell/posh-hg
+	url = https://github.com/JeremySkinner/posh-hg.git
+[submodule "powershell/posh-git"]
+	path = powershell/posh-git
+	url = https://github.com/dahlbyk/posh-git.git
