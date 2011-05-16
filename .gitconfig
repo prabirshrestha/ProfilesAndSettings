@@ -36,3 +36,5 @@
 	path = kdiff3
 [mergetool]
 	prompt = false
+[http]
+	postBuffer = 52428800
