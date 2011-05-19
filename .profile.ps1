@@ -55,6 +55,7 @@ Set-Alias filezilla "$TOOLS\Filezilla\filezilla.exe"
 Set-Alias moma 		"$TOOLS\MoMA\MoMA.exe" # Mono Migration Analyzer
 Set-Alias notepad++ "$TOOLS\Notepad++\notepad++.exe"
 Set-Alias np notepad++
+Set-Alias linqpad "$TOOLS\LINQPad\LINQPad.exe"
 Set-Alias photoshop "$TOOLS\Photoshop\Photoshop.exe"
 Set-Alias reflector "$TOOLS\Reflector\reflector.exe"
 Set-Alias pik "$TOOLS\pik\pik.bat"
@@ -106,24 +107,27 @@ function prompt {
     return "$ "
 }
 
-#  if(-not (Test-Path Function:\DefaultTabExpansion)) {
-    #  Rename-Item Function:\TabExpansion DefaultTabExpansion
-#  }
+if(-not $profile.EndsWith("NuGet_profile.ps1")){
+	if(-not (Test-Path Function:\DefaultTabExpansion)) {
+	  Rename-Item Function:\TabExpansion DefaultTabExpansion
+	}
 
-#  # Set up tab expansion and include git expansion
-#  function TabExpansion($line, $lastWord) {
-    #  $lastBlock = [regex]::Split($line, '[|;]')[-1]
-    
-    #  switch -regex ($lastBlock) {
-        #  # Execute git tab completion for all git-related commands
-        #  'git (.*)' { GitTabExpansion $lastBlock }
-		#  # mercurial and tortoisehg tab expansion
-        #  '(hg|hgtk) (.*)' { HgTabExpansion($lastBlock) }
-        #  # Fall back on existing tab expansion
-        #  default { DefaultTabExpansion $line $lastWord }
-    #  }
-#  }
+	# Set up tab expansion and include git expansion
+	function TabExpansion($line, $lastWord) {
+	  $lastBlock = [regex]::Split($line, '[|;]')[-1]
+	
+	  switch -regex ($lastBlock) {
+		# Execute git tab completion for all git-related commands
+		'git (.*)' { GitTabExpansion $lastBlock }
+		
+		# mercurial and tortoisehg tab expansion
+	    '(hg|hgtk) (.*)' { HgTabExpansion($lastBlock) }
 
+	    # Fall back on existing tab expansion
+	    default { DefaultTabExpansion $line $lastWord }
+	  }
+	}
+}
 
 Enable-GitColors
 
