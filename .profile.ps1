@@ -56,6 +56,7 @@ Set-Alias moma 		"$TOOLS\MoMA\MoMA.exe" # Mono Migration Analyzer
 Set-Alias notepad++ "$TOOLS\Notepad++\notepad++.exe"
 Set-Alias np notepad++
 Set-Alias linqpad "$TOOLS\LINQPad\LINQPad.exe"
+Set-Alias dotpeek "$TOOLS\dotPeek\dotPeek.exe"
 Set-Alias photoshop "$TOOLS\Photoshop\Photoshop.exe"
 Set-Alias reflector "$TOOLS\Reflector\reflector.exe"
 Set-Alias pik "$TOOLS\pik\pik.bat"
