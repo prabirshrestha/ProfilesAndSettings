@@ -12,6 +12,8 @@ tools/
 
 # Vim ignores
 *.swp
+*.un~
 .vimbackup/
 .vimswap/
 .vimviews/
+.vimundo/

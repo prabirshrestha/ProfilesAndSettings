@@ -37,25 +37,33 @@
 	filetype plugin indent on  	" Automatically detect file types.
 	syntax on 					" syntax highlighting
 	set mouse=a					" automatically enable mouse usage
-	
+	set hidden
+    set wildmenu                " turn on command line completion wild sytle
+    set wildmode=list:longest   " turn on wild mode huge list
+    set visualbell
+    set ttyfast
+    set ruler
+    set backspace=indent,eol,start
+    set laststatus=2
+    set relativenumber
+    set undofile
+    let mapleader = ","
 " }
 
 " Vim UI {
 	color prabirdark   	       		" load a colorscheme
 	set showmode                   	" display the current mode
+    set showcmd
 	set cursorline  				" highlight current line
+    "set cursorcolumn                " highlight the current column
 	set nu							" Line numbers on
-	set showmatch					" show matching brackets/parenthesis
-	set incsearch					" find as you type search
-	set hlsearch					" highlight search terms
-	set ignorecase					" case insensitive search
-	set smartcase					" case sensitive when uc present
-	set scrolloff=3 				" minimum lines to keep above and below cursor
+    set scrolloff=3 				" minimum lines to keep above and below cursor
 	set foldenable  				" auto fold code
 
 " }
 
 " Formatting {
+    set encoding=utf-8
 	set nowrap                     	" wrap long lines
 	set autoindent                 	" indent at the same level of the previous line
 	set shiftwidth=4               	" use indents of 4 spaces
@@ -69,6 +77,83 @@
 	autocmd FileType c,cs,cpp,java,php,js,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 " }
 
+" Searching {
+    nnoremap / /\v
+    vnoremap / /\v
+    		set incsearch					" find as you type search
+	set hlsearch					" highlight search terms
+	set ignorecase					" case insensitive search
+	set smartcase					" case sensitive when uc present
+    set gdefault
+    set incsearch
+    set showmatch
+    set hlsearch
+    nnoremap <leader><space> :noh<cr>
+    nnoremap <tab> %
+    vnoremap <tab> %
+" }
+
+" Handle long lines correctly {
+    set wrap
+    set textwidth=79
+    set formatoptions=qrn1
+    set colorcolumn=85
+" }
+
+set list
+set listchars=tab:?\ ,eol:¬
+
+" Disable Arrow Keys { 
+    nnoremap <up> <nop>
+    nnoremap <down> <nop>
+    nnoremap <left> <nop>
+    nnoremap <right> <nop>
+    inoremap <up> <nop>
+    inoremap <down> <nop>
+    inoremap <left> <nop>
+    inoremap <right> <nop>
+    nnoremap j gj
+    nnoremap k gk
+" }
+
+" Disable F1 help when hitting escape {
+    inoremap <F1> <ESC>
+    nnoremap <F1> <ESC>
+    vnoremap <F1> <ESC>
+" }
+
+" Save on lose focus {
+   " au FocusLost * :wa
+" }
+
+nnoremap ; :
+
+" Html fold tag function
+nnoremap <leader>ft Vatzf  
+" CSS properties sorted
+nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
+
+" Select text that i just pasted
+nnoremap <leader>v V`]
+
+" Quick Escaping
+inoremap jj <ESC>
+
+" Horizontal split
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Autocommands {
+    " Ruby {
+        " ruby standard 2 spaces, always
+            au BufRead,BufNewFile *.rb,*.rhtml set shiftwidth=2 
+            au BufRead,BufNewFile *.rb,*.rhtml set softtabstop=2 
+        " }
+" }
+
 function! InitializeDirectories()
   let separator = "."
   let parent = $HOME 
@@ -76,6 +161,7 @@ function! InitializeDirectories()
   let dir_list = { 
 			  \ 'backup': 'backupdir', 
 			  \ 'views': 'viewdir', 
+              \ 'undo': 'undodir',
 			  \ 'swap': 'directory' }
 
   for [dirname, settingname] in items(dir_list)
@@ -86,7 +172,7 @@ function! InitializeDirectories()
 		  endif
 	  endif
 	  if !isdirectory(directory)
-		  echo "Warning: Unable to create backup directory: " . directory
+		  echo "Warning: Unable to create directory: " . directory
 		  echo "Try: mkdir -p " . directory
 	  else  
           let directory = substitute(directory, " ", "\\\\ ", "")
