@@ -72,9 +72,16 @@ append-path "$TOOLS\git\cmd"        # download portable git from http://code.goo
 append-path "$TOOLS\veracity"
 append-path "$TOOLS\NuGet"
 append-path "$TOOLS\vim\vim73\"
+append-path "$TOOLS\php"
+append-path "$TOOLS\ZoomIt"
+append-path "C:\Python32"
+append-path "$TOOLS\mongo\bin"
+Set-Alias iisexpress "c:\Program Files (x86)\IIS Express\iisexpress.exe"
+Set-Alias vi "vim"
+$env:EDITOR = "vim"
 append-path "$HOME\tools\curl\"
 Set-Alias sz "$HOME\tools\7za\7za.exe"
-$env:EDITOR = "vim"
+
 
 # uuidgen.exe replacement
 function uuidgen {

@@ -8,3 +8,6 @@
 [submodule "powershell/posh-git"]
 	path = powershell/posh-git
 	url = https://github.com/dahlbyk/posh-git.git
+[submodule "git-modules/git-hg"]
+	path = git-modules/git-hg
+	url = https://github.com/offbytwo/git-hg.git
