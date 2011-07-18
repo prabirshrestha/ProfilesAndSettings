@@ -133,7 +133,7 @@ set listchars=tab:?\ ,eol:¬
    " au FocusLost * :wa
 " }
 
-nnoremap ; :
+"nnoremap ; :
 
 " Html fold tag function
 nnoremap <leader>ft Vatzf  
