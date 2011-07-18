@@ -100,6 +100,13 @@
     set colorcolumn=85
 " }
 
+" Folding {
+    set foldmethod=indent   " fold based on indent
+    set foldnestmax=10      " deepest fold is 10 level
+    set nofoldenable        " don't fold by default
+    set foldlevel=1
+"}
+
 set list
 set listchars=tab:?\ ,eol:¬
 
