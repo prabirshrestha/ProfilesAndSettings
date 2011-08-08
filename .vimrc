@@ -143,9 +143,6 @@ nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 " Select text that i just pasted
 nnoremap <leader>v V`]
 
-" Quick Escaping
-inoremap jj <ESC>
-
 " Horizontal split
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
