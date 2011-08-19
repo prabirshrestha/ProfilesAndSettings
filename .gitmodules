@@ -18,3 +18,6 @@
 [submodule ".vim/bundle/easy-motion"]
 	path = .vim/bundle/easy-motion
 	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule ".vim/bundle/surround"]
+	path = .vim/bundle/surround
+	url = https://github.com/tpope/vim-surround.git
