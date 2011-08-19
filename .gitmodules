@@ -11,3 +11,7 @@
 [submodule "git-modules/git-hg"]
 	path = git-modules/git-hg
 	url = https://github.com/offbytwo/git-hg.git
+
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git

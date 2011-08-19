@@ -17,3 +17,5 @@ tools/
 .vimswap/
 .vimviews/
 .vimundo/
+.vim/.netrwhist
+.NERDTreeBookmarks
