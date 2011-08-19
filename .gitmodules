@@ -11,13 +11,15 @@
 [submodule "git-modules/git-hg"]
 	path = git-modules/git-hg
 	url = https://github.com/offbytwo/git-hg.git
-
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
+[submodule ".vim/bundle/vim-nerdtree"]
+	path = .vim/bundle/vim-nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/easy-motion"]
-	path = .vim/bundle/easy-motion
+[submodule ".vim/bundle/vim-easymotion"]
+	path = .vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
-[submodule ".vim/bundle/surround"]
-	path = .vim/bundle/surround
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/vim-sparkup"]
+	path = .vim/bundle/vim-sparkup
+	url = https://github.com/bingaman/vim-sparkup.git
